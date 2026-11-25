@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>演算法互動教學系列 — Algorithms Visual Learning</title>
+<style>
+  :root {
+    --bg: #0f172a; --panel: #1e293b; --code-bg: #0b1120; --border: #334155;
+    --text: #f8fafc; --muted: #94a3b8; --cyan: #38bdf8; --amber: #fbbf24;
+    --green: #34d399; --rose: #fb7185; --purple: #c084fc;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: "Microsoft JhengHei", sans-serif; background: var(--bg); color: var(--text);
+    padding: 28px 24px; min-height: 100vh; max-width: 1100px; margin: 0 auto;
+    display: flex; flex-direction: column; gap: 22px;
+  }
+  header { background: var(--panel); padding: 26px 28px; border-radius: 14px; border: 1px solid var(--border); }
+  header h1 { font-size: 32px; color: var(--cyan); margin-bottom: 8px; }
+  header p { font-size: 16px; color: var(--muted); line-height: 1.7; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 16px; }
+  .card {
+    background: var(--panel); border: 1px solid var(--border); border-radius: 14px;
+    padding: 20px 22px; display: flex; flex-direction: column; gap: 12px;
+    transition: 0.18s; text-decoration: none; color: inherit;
+  }
+  .card:hover { transform: translateY(-4px); border-color: var(--cyan); box-shadow: 0 8px 24px rgba(56,189,248,0.15); }
+  .num { font-size: 13px; color: var(--muted); font-family: Consolas, monospace; }
+  .card h2 { font-size: 22px; color: var(--cyan); }
+  .card .en { font-size: 14px; color: var(--purple); font-family: Consolas, monospace; }
+  .card .desc { font-size: 14px; color: var(--muted); line-height: 1.6; }
+  .tags { display: flex; gap: 8px; flex-wrap: wrap; margin-top: auto; }
+  .tag { font-size: 13px; background: var(--code-bg); border: 1px solid var(--border); border-radius: 7px; padding: 5px 10px; color: var(--amber); font-family: Consolas, monospace; }
+  .tag.count { color: var(--green); }
+  .btn { display: inline-block; margin-top: 4px; background: var(--cyan); color: #0f172a; font-weight: bold; border-radius: 8px; padding: 8px 14px; text-align: center; }
+  footer { text-align: center; color: var(--muted); font-size: 14px; padding: 8px; }
+</style>
+</head>
+<body>
+  <header>
+    <h1>📚 演算法互動教學系列</h1>
+    <p>以互動動畫與逐步追蹤學習四大單元：排序、最短路徑、貪婪演算法與動態規劃。每一步都搭配程式碼與變數狀態，點選章節卡片開始學習。</p>
+  </header>
+
+  <main class="grid">
+    <a class="card" href="https://suchen-chiang.github.io/HTML5_Sort/" target="_blank" rel="noopener">
+      <span class="num">CH 09</span>
+      <h2>第 9 章　排序</h2>
+      <span class="en">Sorting</span>
+      <span class="desc">五種經典排序法的逐步動畫：氣泡、選擇、插入、快速與合併排序。</span>
+      <div class="tags"><span class="tag count">5 篇</span><span class="tag">O(n²)</span><span class="tag">O(n log n)</span></div>
+      <span class="btn">進入章節 →</span>
+    </a>
+
+    <a class="card" href="https://suchen-chiang.github.io/HTML5_Graph_ShortPath/" target="_blank" rel="noopener">
+      <span class="num">CH 14</span>
+      <h2>第 14 章　圖形理論之最短路徑演算法</h2>
+      <span class="en">Shortest Path</span>
+      <span class="desc">Dijkstra 演算法與 GPS 導航實例：加權圖、松弛、heapq 優先佇列。</span>
+      <div class="tags"><span class="tag count">3 篇</span><span class="tag">Dijkstra</span><span class="tag">GPS 導航</span></div>
+      <span class="btn">進入章節 →</span>
+    </a>
+
+    <a class="card" href="https://suchen-chiang.github.io/HTML5_GreedyAlgorithm/" target="_blank" rel="noopener">
+      <span class="num">CH 15</span>
+      <h2>第 15 章　貪婪演算法</h2>
+      <span class="en">Greedy Algorithm</span>
+      <span class="desc">背包問題、業務員旅行問題（TSP）與霍夫曼編碼的貪婪策略演示。</span>
+      <div class="tags"><span class="tag count">4 篇</span><span class="tag">Knapsack</span><span class="tag">TSP</span><span class="tag">Huffman</span></div>
+      <span class="btn">進入章節 →</span>
+    </a>
+
+    <a class="card" href="https://suchen-chiang.github.io/HTML5_DP/" target="_blank" rel="noopener">
+      <span class="num">CH 16</span>
+      <h2>第 16 章　動態規劃演算法</h2>
+      <span class="en">Dynamic Programming</span>
+      <span class="desc">從費波那契與遞迴對照，到 0/1 背包、LCS 與弗洛伊德演算法的二維填表動畫。</span>
+      <div class="tags"><span class="tag count">7 篇</span><span class="tag">狀態轉移</span><span class="tag">Memorization</span></div>
+      <span class="btn">進入章節 →</span>
+    </a>
+  </main>
+
+  <footer>HTML5 互動教學 · 以 GitHub Pages 架設</footer>
+</body>
+</html>
